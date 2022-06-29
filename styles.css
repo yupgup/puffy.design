@@ -81,15 +81,21 @@ body {
   color: #31112C;
 }
 
+.page {
+  padding-bottom: 3rem;
+}
+
 .block {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
 .container {
   margin-left: auto;
   margin-right: auto;
   max-width: 1140px;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .site-header {
@@ -136,10 +142,82 @@ h1 strong {
 }
 
 .hero {
+  margin-bottom: 3rem;
   padding-top: 4rem;
   min-height: 35rem;
   background-image: url(images/sea-plants.svg);
   background-position: bottom center;
   background-repeat: no-repeat;
   background-size: 100% auto;
+}
+
+.site-footer > .container {
+  padding: 2rem 4rem;
+  border-radius: 10px;
+  background-color: #175361;
+  text-align: center;
+}
+
+.site-footer h2 {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 26ch;
+  color: #F3F6FF;
+}
+
+.site-footer-cta {
+  position: relative;
+  font-size: 4rem;
+  font-weight: 700;
+  background: linear-gradient(93.95deg, #FEECE9 18.2%, #FFEFEA 84.38%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.site-footer-cta::after {
+  position: relative;
+  display: block;
+  margin: 1.5rem auto 0;
+  width: 300px;
+  height: 40px;
+  background-image: url(images/squiggle.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+}
+
+.sample-block > .container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.sample-block-images {
+  order: 0;
+  background: green;
+  min-height: 3rem;
+}
+
+.sample-block .block-content {
+  order: 1;
+}
+
+
+
+@media (min-width: 768px) {
+  .sample-block > .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+
+  .sample-block.content-first .block-content {
+    order: 0;
+  }
+
+  .sample-block.content-first .sample-block-images {
+    order: 1;
+  }
 }
