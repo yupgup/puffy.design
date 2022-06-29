@@ -82,7 +82,7 @@ body {
 }
 
 .highlight {
-  display: inline-block;
+  display: inline;
   padding-left: .25ch;
   padding-right: .25ch;
   background-image: linear-gradient(0deg, #FEECE9 50%, transparent 50%);
@@ -100,7 +100,7 @@ body {
 .container {
   margin-left: auto;
   margin-right: auto;
-  max-width: 1140px;
+  max-width: 1360px;
   padding-left: 2rem;
   padding-right: 2rem;
 }
@@ -161,14 +161,14 @@ p + p {
 .hero {
   margin-bottom: 3rem;
   padding-top: 4rem;
-  min-height: 35rem;
-  background-image: url(images/sea-plants.svg);
+  padding-bottom: clamp(4rem, 55vw, 50rem);
+  background-image: url(images/sea-plants-small.svg);
   background-position: bottom center;
   background-repeat: no-repeat;
   background-size: 100% auto;
 }
 
-.site-footer > .container {
+.site-footer-wrap {
   padding: 2rem 4rem;
   border-radius: 10px;
   background-color: #175361;
@@ -184,7 +184,7 @@ p + p {
 
 .site-footer-cta {
   position: relative;
-  font-size: 4rem;
+  font-size: 2.5rem;
   font-weight: 700;
   background: linear-gradient(93.95deg, #FEECE9 18.2%, #FFEFEA 84.38%);
   -webkit-background-clip: text;
@@ -231,9 +231,16 @@ p + p {
 
 
 @media (min-width: 768px) {
+  .hero {
+    padding-top: 4rem;
+    padding-bottom: clamp(4rem, 16vw, 25rem);
+    background-image: url(images/sea-plants.svg);
+  }
+
   .sample-block > .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    align-items: center;
     gap: 4rem;
   }
 
@@ -243,5 +250,9 @@ p + p {
 
   .sample-block.content-first .sample-block-images {
     order: 1;
+  }
+
+  .site-footer-cta {
+    font-size: 4rem;
   }
 }
