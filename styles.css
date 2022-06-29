@@ -73,9 +73,11 @@ select {
   }
 }
 
+/* Begin site styles */
 
 body {
   font-family: 'Poppins', sans-serif;
+  font-size: 18px;
   color: #31112C;
 }
 
@@ -119,6 +121,12 @@ h1 {
   font-size: 3.5rem;
   font-weight: 600;
   text-align: center;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  color: #7D0633;
 }
 
 h1 strong {
