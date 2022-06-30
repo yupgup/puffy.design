@@ -75,9 +75,12 @@ select {
 
 /* Begin site styles */
 
+html {
+  font-size: 18px;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
-  font-size: 18px;
   color: #31112C;
 }
 
@@ -89,20 +92,20 @@ body {
 }
 
 .page {
-  padding-bottom: 3rem;
+  padding-bottom: 2rem;
 }
 
 .block {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 
 .container {
   margin-left: auto;
   margin-right: auto;
   max-width: 1360px;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .site-header {
@@ -112,7 +115,8 @@ body {
 
 .site-header > .container {
   display: flex;
-  justify-content: space-between;
+  flex-flow: row wrap;
+  justify-content: center;
   align-items: center;
   gap: 2rem;
 }
@@ -131,14 +135,14 @@ body {
 h1 {
   margin: 0 auto;
   max-width: 22ch;
-  font-size: 3.5rem;
+  font-size: 1.9rem;
   font-weight: 600;
   text-align: center;
 }
 
 h2 {
   margin-bottom: 1rem;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   color: #7D0633;
 }
 
@@ -160,8 +164,8 @@ p + p {
 
 .hero {
   margin-bottom: 3rem;
-  padding-top: 4rem;
-  padding-bottom: clamp(4rem, 55vw, 50rem);
+  padding-top: 2rem;
+  padding-bottom: clamp(4rem, 65vw, 50rem);
   background-image: url(images/sea-plants-small.svg);
   background-position: bottom center;
   background-repeat: no-repeat;
@@ -169,7 +173,7 @@ p + p {
 }
 
 .site-footer-wrap {
-  padding: 2rem 4rem;
+  padding: 2rem;
   border-radius: 10px;
   background-color: #175361;
   text-align: center;
@@ -184,7 +188,7 @@ p + p {
 
 .site-footer-cta {
   position: relative;
-  font-size: 2.5rem;
+  font-size: 1.4rem;
   font-weight: 700;
   background: linear-gradient(93.95deg, #FEECE9 18.2%, #FFEFEA 84.38%);
   -webkit-background-clip: text;
@@ -197,7 +201,7 @@ p + p {
   position: relative;
   display: block;
   margin: 1.5rem auto 0;
-  width: 300px;
+  width: clamp(120px, 100%, 300px);
   height: 40px;
   background-image: url(images/squiggle.svg);
   background-repeat: no-repeat;
@@ -229,12 +233,51 @@ p + p {
   color: #31112C;
 }
 
+@media (min-width: 620px) {
+  .site-header > .container {
+    justify-content: space-between;
+  }
 
-@media (min-width: 768px) {
   .hero {
     padding-top: 4rem;
-    padding-bottom: clamp(4rem, 16vw, 25rem);
+    padding-bottom: clamp(4rem, 24vw, 25rem);
     background-image: url(images/sea-plants.svg);
+  }
+
+  h1 {
+    font-size: 2.8rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .site-footer-cta {
+    font-size: 2.4rem;
+  }
+}
+
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  .hero {
+    padding-bottom: clamp(4rem, 20vw, 25rem);
+  }
+
+  .block {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .site-footer-cta {
+    font-size: 3rem;
   }
 
   .sample-block > .container {
@@ -250,9 +293,5 @@ p + p {
 
   .sample-block.content-first .sample-block-images {
     order: 1;
-  }
-
-  .site-footer-cta {
-    font-size: 4rem;
   }
 }
