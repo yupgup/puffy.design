@@ -196,6 +196,8 @@ p + p {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
+
+  text-decoration: none;
 }
 
 .site-footer-cta::after {
@@ -208,6 +210,10 @@ p + p {
   background-repeat: no-repeat;
   background-size: contain;
   content: "";
+}
+
+.site-footer-cta:hover {
+  background-color: #ed7a51;
 }
 
 .sample-block > .container {
