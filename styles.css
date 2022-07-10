@@ -325,4 +325,34 @@ p + p {
   h1 {
     font-size: 4.25rem;
   }
+
+  .ender-block {
+    position: relative;
+  }
+
+  .ender-block::before,
+  .ender-block::after {
+    position: absolute;
+    content: "";
+
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+  }
+
+  .ender-block::before {
+    bottom: 3rem;
+    left: 2rem;
+    height: 110px;
+    aspect-ratio: 112 / 138;
+    background-image: url(images/drops-2.svg);
+    
+  }
+
+  .ender-block::after {
+    top: 2rem;
+    right: 2rem;
+    height: 134px;
+    aspect-ratio: 102 / 134;
+    background-image: url(images/drops.svg);
+  }
 }
