@@ -124,9 +124,9 @@ body {
 
 .site-header-email-cta {
   display: block;
-  width: 180px;
-  height: 80px;
-  background-image: url(images/email-cta.svg);
+  width: 250px;
+  height: 100px;
+  background-image: url(images/email-cta.png);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -238,6 +238,24 @@ p + p {
 
 .ender-block h2 {
   color: #31112C;
+}
+
+.has-mini-squiggle {
+  position: relative;
+}
+
+.has-mini-squiggle::after {
+  position: absolute;
+  bottom: -1.25rem;
+  left: 0;
+  width: 100%;
+  aspect-ratio: 215 / 62;
+
+  background-image: url(images/mini-squiggle.svg);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+
+  content: "";
 }
 
 @media (min-width: 620px) {
