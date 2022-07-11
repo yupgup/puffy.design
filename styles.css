@@ -85,6 +85,14 @@ body {
   color: #31112C;
 }
 
+a {
+  color: #31112C;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
 .highlight {
   display: inline;
   padding-left: .25ch;
@@ -242,6 +250,11 @@ p + p {
 
 .has-mini-squiggle {
   position: relative;
+}
+
+.brand-notice {
+  margin: 2rem auto;
+  text-align: center;
 }
 
 .has-mini-squiggle::after {
